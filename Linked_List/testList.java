@@ -1,5 +1,6 @@
 package Linked_List;
-import java.io.*;
+
+import java.util.LinkedList;
 
 class Node{
     int data;
@@ -24,11 +25,23 @@ public class testList {
             temp.next = newNode;
         }
     }
+
     public void insertHead(int data){
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
+
+    public int len(){
+        int x = 0;
+        Node temp = head;
+        while(temp!=null){
+            x++;
+            temp = temp.next;
+        }
+        return x;
+    }
+
     public void insertPos(int data,int pos){
         Node newNode = new Node(data);
         if(pos==0 || head == null){
@@ -43,6 +56,7 @@ public class testList {
         newNode.next = temp.next;
         temp.next = newNode;
     }
+
     public void print(){
         Node temp = head;
         while(temp != null){
@@ -51,6 +65,18 @@ public class testList {
         }
         System.out.println();
     }
+
+    public Boolean search(int t){
+        Node temp = head;
+        while(temp!=null){
+            if(temp.data==t){
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         testList list = new testList();
         list.add(1);
@@ -61,5 +87,8 @@ public class testList {
         list.print();
         list.insertPos(5,2);
         list.print();
+        list.add(4);
+        System.out.println(list.search(4));
+        System.out.println(list.len());
     }
 }

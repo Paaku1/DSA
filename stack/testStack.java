@@ -1,14 +1,17 @@
 package stack;
-class test{
-    String x = "Hola";
-}
+
+import java.util.Stack;
 
 public class testStack {
     public static void main(String[] args) {
-        System.out.println("Hello");
-        test x = new test();
-        call t = new call();
-        System.out.println(t.p);
-        System.out.println(x.x);
+        Stack<Integer> s = new Stack<>();
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        System.out.println(s);
+        s.pop();
+        System.out.println(s);
+        System.out.println(s.peek());
+        System.out.println(s.isEmpty());
     }
 }

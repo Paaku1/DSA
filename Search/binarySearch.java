@@ -9,9 +9,11 @@ public class binarySearch {
     }
     public static void main(String[] args) {
         input Input = new input();
-        int t = 9;
+        int t = 10;
         System.out.println("Array: "+Arrays.toString(Input.arr()));
-        System.out.println("Target Value: "+ t);
-        System.out.println("Found "+find(Input.arr(),t));
+        System.out.println("Target Value: "+t);
+        int r = find(Input.arr(),t);
+        int res = (r > 0) ? r : -1;
+        System.out.println("Found "+res);
     }
 }

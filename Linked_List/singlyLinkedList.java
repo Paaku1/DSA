@@ -1,16 +1,4 @@
 package Linked_List;
-
-import java.util.LinkedList;
-
-class Node{
-    int data;
-    Node next;
-
-    Node(int d){
-        data = d;
-        next = null;
-    }
-}
 public class singlyLinkedList {
     Node head;
     public void add(int data){
@@ -20,7 +8,7 @@ public class singlyLinkedList {
         } else {
             Node temp = head;
             while(temp.next != null){
-                temp = temp.next; //goes to the end of the list
+                temp = temp.next;//goes to the end of the list
             }
             temp.next = newNode;
         }

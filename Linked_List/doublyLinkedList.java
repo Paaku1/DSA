@@ -9,9 +9,6 @@ class Node{
         this.next = null;
         this.prev = null;
     }
-    Node(){
-        
-    }
 }
 
 public class doublyLinkedList {
@@ -40,7 +37,6 @@ public class doublyLinkedList {
 
     public static void main(String[] args) {
         doublyLinkedList dll = new doublyLinkedList();
-        Node x = new Node();
         dll.add(1);
         dll.add(2);
         dll.add(3);

@@ -4,11 +4,11 @@ public class ArraySum {
 
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5 };
-        int s = 0;
-        System.out.println(sum(arr, 0, s));
+        ArraySum Arrays = new ArraySum();
+        System.out.println(Arrays.sum(arr, 0, 0));
     }
 
-    private static int sum(int[] arr, int i, int sum) {
+    private int sum(int[] arr, int i, int sum) {
         if (i == arr.length) {
             return sum;
         }

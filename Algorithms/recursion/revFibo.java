@@ -11,6 +11,5 @@ public class revFibo {
             reverse(n - 1, j, i + j);
             System.out.print(i + " ");
         }
-        return;
     }
 }

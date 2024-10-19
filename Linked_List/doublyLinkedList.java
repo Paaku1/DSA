@@ -1,10 +1,11 @@
 package Linked_List;
 
-class Node{
+class Node {
     int data;
     Node next;
     Node prev;
-    Node(int d){
+
+    Node(int d) {
         this.data = d;
         this.next = null;
         this.prev = null;
@@ -13,23 +14,24 @@ class Node{
 
 public class doublyLinkedList {
     Node head;
-    public void add(int data){
+
+    public void add(int data) {
         Node newNode = new Node(data);
-        if(head == null){
+        if (head == null) {
             head = newNode;
         } else {
             Node temp = head;
-            while(temp.next!=null)
+            while (temp.next != null)
                 temp = temp.next;
             temp.next = newNode;
             newNode.prev = temp;
         }
     }
 
-    public void print(){
+    public void print() {
         Node temp = head;
-        while(temp!=null){
-            System.out.print(temp.data+" ");
+        while (temp != null) {
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
         System.out.println();

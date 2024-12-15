@@ -9,5 +9,6 @@ public class Node {
         left = right = null;
     }
 
-    Node(){}
+
+
 }

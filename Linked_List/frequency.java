@@ -1,16 +1,17 @@
 package Linked_List;
+
 import java.util.*;
 
-public class frequency {
+public class frequency<T> {
 
-    Node head;
+    Node<T> head;
 
-    void add(int data) {
-        Node newNode = new Node(data);
+    void add(T data) {
+        Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
         } else {
-            Node temp = head;
+            Node<T> temp = head;
             while (temp.next != null) {
                 temp = temp.next;
             }
@@ -19,7 +20,7 @@ public class frequency {
     }
 
     void print() {
-        Node temp = head;
+        Node<T> temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
@@ -27,18 +28,18 @@ public class frequency {
         System.out.println();
     }
 
-    Map<Integer,Integer> freq(){
+    Map<Integer, Integer> freq() {
         Map<Integer, Integer> map = new HashMap<>();
-        Node temp = head;
-        while(temp != null){
-            map.put(temp.data,map.getOrDefault(temp.data,0)+1);
+        Node<T> temp = head;
+        while (temp != null) {
+            map.put(temp.data, map.getOrDefault(temp.data, 0) + 1);
             temp = temp.next;
         }
         return map;
     }
 
     public static void main(String[] args) {
-        frequency list = new frequency();
+        frequency<Integer> list = new frequency<>();
         list.add(1);
         list.add(1);
         list.add(1);

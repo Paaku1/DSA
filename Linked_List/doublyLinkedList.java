@@ -10,6 +10,7 @@ class Node {
         this.next = null;
         this.prev = null;
     }
+    
 }
 
 public class doublyLinkedList {

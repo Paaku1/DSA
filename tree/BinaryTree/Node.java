@@ -1,15 +1,13 @@
-package Linked_List;
+package tree.BinaryTree;
 
 public class Node {
     int data;
-    Node next;
-
-    Node() {
-    }
+    Node left, right;
 
     Node(int data) {
         this.data = data;
-        this.next = null;
+        left = right = null;
     }
 
+    Node(){}
 }

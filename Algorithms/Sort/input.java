@@ -1,3 +1,4 @@
+package Algorithms.Sort;
 
 class input {
     public int[] Arr(){

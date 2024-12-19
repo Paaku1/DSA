@@ -2,7 +2,7 @@ package tree.BST;
 
 import java.util.*;
 
-public class Node extends Methods{
+public class Node extends Methods {
     Integer data;
     Node left, right;
     Node root;
@@ -16,15 +16,20 @@ public class Node extends Methods{
         this(null);
     }
 
-    int height(){
+    int height() {
         return getHeight(root);
     }
 
+    int count() {
+        return getCount(root);
+    }
+
     void add(int[] data) {
-        for(int i : data){
+        for (int i : data) {
             add(i);
         }
     }
+
     void add(int data) {
         root = insert(root, data);
     }

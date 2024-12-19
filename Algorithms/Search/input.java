@@ -1,4 +1,4 @@
-package Search;
+package Algorithms.Search;
 
 public class input {
     public int[] arr(){

@@ -1,6 +1,6 @@
 package tree.BST;
 
-public class Methods {
+class Methods {
 
     Node insert(Node node, int data) {
         if (node == null) {
@@ -19,6 +19,13 @@ public class Methods {
             return 0;
         }
         return Math.max(getHeight(node.left),getHeight(node.right)) + 1;
+    }
+
+    int getCount(Node node){
+        if(node == null){
+            return 0;
+        }
+        return getCount(node.left) + getCount(node.right) + 1;
     }
 
     

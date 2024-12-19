@@ -7,5 +7,6 @@ public class BST {
         tree.add(arr);
         tree.traverse();
         System.out.println(tree.height());
+        System.out.println(tree.count());
     }
 }

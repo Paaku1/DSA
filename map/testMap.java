@@ -1,4 +1,4 @@
-package map;
+package Map;
 import java.util.*;
 public class testMap {
     public static void main(String[] args) {
